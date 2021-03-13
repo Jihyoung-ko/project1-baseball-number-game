@@ -6,3 +6,7 @@ const outCount = document.querySelector("#out-count");
 const winGame = document.querySelector("#win-game");
 const loseGame = document.querySelector("#lose-game");
 const startAgainbtn = document.querySelector("#game-over input");
+
+const isThreeDigits = (number) => {
+  return number.length === 3;
+}
