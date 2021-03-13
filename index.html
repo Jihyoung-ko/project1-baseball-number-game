@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Baseball Number Game</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Baseball Number Game</h1>
+    <div id="game">
+      <p>Guess three numbers</p>
+      <div id="attemps">
+        <div id="answer-number">
+          <input type="number" placeholder="???" disabled>
+          <div id=SBO>S B O</div>
+        </div>
+        <div id="attemp">
+          <input type="number" class="guess-number" placeholder="">
+          <input type="submit" class="guess-button">
+          <div class="guess-result">
+            <div class="result strike-result">0</div>
+            <div class="result ball-result">0</div>
+            <div class="result out-result">0</div>
+          </div>
+        </div>
+     </div>
+     <div id="game-over">
+       <p id="winning-game">HOME RUN!! YOU'RE CORRECT</p>
+       <input type="submit" value="START AGAIN">
+       <p id="loosing-game">GAME OVER!! YOU LOST</p>
+       <input type="submit" value="START AGAIN">
+       
+       
+     </div>
+    </div> 
+  </div>
+  
+</body>
+</html>
