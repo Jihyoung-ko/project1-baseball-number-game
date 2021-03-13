@@ -14,7 +14,8 @@ Example.
 
 The answer number: 178
 
-1st attemp: 825 -> 1S 1B (you got one strike for 5 and one ball for 8)
-2nd attemp: 784 -> 2B (you got two balls for 7 and 8)
+1st attempt: 825 -> 1B (you got one ball for 8)
+2nd attempt: 784 -> 2B (you got two balls for 7 and 8)
+3rd attempt: 148 -> 2S (you got two strikes for 1 and 8)
 
 

@@ -10,33 +10,40 @@
 <body>
   <div id="container">
     <h1>Baseball Number Game</h1>
-    <div id="game">
+    <div id="introduction-container">
+      <!-- game explanation -->
+    </div>
+    <div id="game-container">
       <p>Guess three numbers</p>
-      <div id="attemps">
-        <div id="answer-number">
-          <input type="number" placeholder="???" disabled>
-          <div id=SBO>S B O</div>
+      
+      <div id="answer-number">
+        <input type="number" placeholder="???" disabled>
+        <div id=SBO>S B O</div>
+      </div>
+      <div class="guess-input">
+        
+        <input type="number" class="guess-number" placeholder="">
+        <input type="submit" class="guess-button">
+        <div id="guess-result">
+          <div class="result" id="strike-result"><p id="strike-count">0</p></div>
+          <div class="result" id="ball-result"><p id="ball-count">0</p></div>
+          <div class="result" id="out-result"><p id="out-count">0</p></div>
         </div>
-        <div id="attemp">
-          <input type="number" class="guess-number" placeholder="">
-          <input type="submit" class="guess-button">
-          <div class="guess-result">
-            <div class="result strike-result">0</div>
-            <div class="result ball-result">0</div>
-            <div class="result out-result">0</div>
-          </div>
-        </div>
-     </div>
+      </div>
+    
      <div id="game-over">
-       <p id="winning-game">HOME RUN!! YOU'RE CORRECT</p>
-       <input type="submit" value="START AGAIN">
-       <p id="loosing-game">GAME OVER!! YOU LOST</p>
-       <input type="submit" value="START AGAIN">
-       
-       
+        <div id="win-game">
+          <p>HOME RUN!! YOU'RE CORRECT</p>
+          <input type="submit" value="START AGAIN">
+        </div>
+        <div id="lose-game">
+          <p>GAME OVER!! YOU LOST</p>
+          <input type="submit" value="START AGAIN">
+        </div>
+              
      </div>
     </div> 
   </div>
-  
+  <script src="main.js"></script>
 </body>
 </html>
