@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+h1, p {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#container {
+  margin: 100px auto;
+  max-width: 500px;
+}
+
+#answer-number, 
+#attemp,
+.guess-result {
+  display: flex;
+}
+
+#attemps {
+  margin: 20px 100px;
+}
+
+#answer-number input, 
+.guess-number,
+.guess-button {
+  margin: 5px;
+  padding: 5px;
+}
+
+#SBO {
+  margin-left: 90px
+}
+
+.result {
+   margin-left: 10px;
+   padding:5px;
+   background: red;
+}
