@@ -24,6 +24,10 @@ h1, p {
   display: flex;
 }
 
+.guess-number {
+  width: 10%;
+}
+
 #attempts {
   margin: 20px 100px;
 }
