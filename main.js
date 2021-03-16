@@ -1,28 +1,59 @@
+
+const playerNumbers = document.querySelectorAll(".guess-number"); 
+const answerNumber = [
+  Math.floor(Math.random() *10).toString(),
+  Math.floor(Math.random() *10).toString(),
+  Math.floor(Math.random() *10).toString()
+]
+
+console.log(answerNumber);
+
 const getPlayerNumbers = () => {
-  const playerNumber = document.querySelectorAll(".guess-number"); 
   let arrPlayerNumbers = [];
 
-  playerNumber.forEach(element => {
-  arrPlayerNumbers.push(element.value);
+  playerNumbers.forEach(element => {
+    arrPlayerNumbers.push(element.value);
   });
 
-  console.log(arrPlayerNumbers);
   return arrPlayerNumbers;
 }
-
-const getAnswer = () => { 
-  let answer = [];
-  while (answer.length < 3) {
-    let randomNumber = Math.floor(Math.random() *10);
-    answer = answer + randomNumber;
-  }
-  console.log(answer);
-  return answer;
-}
-getAnswer();
 
 const guessButton = document.querySelector('.guess-button');
 
 guessButton.addEventListener('click', function(){
+
   getPlayerNumbers();
+  countStrike();
+
+
 });
+
+const countStrike = () => {
+  let i = 0;
+  let j = 0;
+  let strike = 0;
+  let ball = 0;
+  let out = 3;
+
+  while (i < 3) {
+    const gNumber = answerNumber[i];
+    while (j < 3) {
+      const pNumber = getPlayerNumbers()[j];
+      if(i === j && gNumber === pNumber) {
+        strike++;
+      }else if(i !== j && gNumber === pNumber){
+        ball++;
+      }
+      j = j + 1;
+    } 
+    j = 0;
+    i = i + 1;
+  }
+  out = out - strike - ball;
+
+  document.getElementById('strike-count').innerHTML = strike;
+  document.getElementById("ball-count").innerHTML = ball;
+  document.getElementById("out-count").innerHTML = out;
+}
+
+
