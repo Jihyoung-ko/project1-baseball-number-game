@@ -24,7 +24,13 @@ h1, p {
   display: flex;
 }
 
-.guess-number {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-box {
   width: 10%;
 }
 
@@ -33,7 +39,7 @@ h1, p {
 }
 
 #answer-number input, 
-.guess-number,
+.number-box,
 .guess-button {
   margin: 5px;
   padding: 5px;
@@ -46,8 +52,9 @@ h1, p {
 .result {
    margin-left: 10px;
    padding:5px;
-   height: 50%;
-   border-radius: 50%;
+   height: 30px;
+   width: 30px;
+   border-radius: 100px;
    color: white;
 }
 
@@ -67,6 +74,10 @@ h1, p {
   background: red;
 }
 
-#game-over {
+.dissapear {
   display: none;
+}
+
+.disable {
+  pointer-events: none;
 }
