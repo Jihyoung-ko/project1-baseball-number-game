@@ -30,9 +30,10 @@ const getPlayerNumbers = () => {
 const actionFunc = function(){
 
   if(attempts < 1){
-    console.log("YOU LOST :(");
-    document.getElementById('game-container').classList.add('dissapear');
+    document.getElementById('container').classList.add('dissapear');
     document.getElementById('lose-game').classList.remove('dissapear');
+    document.getElementById('lostMessage').innerHTML = `GAME OVER!! YOU LOST, THE ANSWER WAS ${answer.join('')}`;
+
   }
   
   getPlayerNumbers();
@@ -46,8 +47,9 @@ const actionFunc = function(){
     }
   }
   if(JSON.stringify(answer) === JSON.stringify(getPlayerNumbers())) {
-    document.getElementById('game-container').classList.add('dissapear');
+    document.getElementById('container').classList.add('dissapear');
     document.getElementById('win-game').classList.remove('dissapear');
+
   }else {
 
     for(let playerNumber of playerNumbers) {
@@ -67,11 +69,11 @@ const actionFunc = function(){
     <input type="number" class="guess-number number-box" placeholder="" min="0" max="9">
     <input type="number" class="guess-number number-box" placeholder="" min="0" max="9">
 
-    <input type="submit" class="guess-button number-box" onclick="actionFunc()">
+    <input type="submit" class="guess-button number-box" value="check" onclick="actionFunc()">
     <div id="guess-result">
-      <div class="result" id="strike-result"><p id="strike-count">0</p></div>
-      <div class="result" id="ball-result"><p id="ball-count">0</p></div>
-      <div class="result" id="out-result"><p id="out-count">0</p></div>
+      <div class="result green-circle"><p id="strike-count">0</p></div>
+      <div class="result orange-circle"><p id="ball-count">0</p></div>
+      <div class="result red-circle"><p id="out-count">0</p></div>
     </div>`;
 
     document.getElementById('game-container').appendChild(newTry);

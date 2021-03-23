@@ -8,18 +8,31 @@
   <title>Baseball Number Game</title>
 </head>
 <body>
+  <h1>Baseball Number Game</h1>
   <div id="container">
-    <h1>Baseball Number Game</h1>
     <div id="introduction-container">
       <!-- game explanation -->
+      <p><span class="green-circle">Strike</span> : The number and the position is correct</p>
+      <p><span class="orange-circle">Ball</span> : The number is correct but the position is wrong</p>
+      <p><span class="red-circle">Out</span> : The number is not correct</p>
+      
     </div>
 
     <div id="game-container">
       <p>Guess three numbers</p>
       
       <div id="answer-number">
-        <input type="number" placeholder="???" disabled>
-        <div id="SBO">S B O</div>
+        <input type="number" class="number-box" placeholder="?" disabled>
+        <input type="number" class="number-box" placeholder="?" disabled>
+        <input type="number" class="number-box" placeholder="?" disabled>
+
+        
+        <div id="SBO">
+          <div class="result green-circle"><p>S</p></div>
+          <div class="result orange-circle"><p>B</p></div>
+          <div class="result red-circle"><p>O</p></div>
+        </div>
+
       </div>
       <div class="guess-input">
         
@@ -27,26 +40,35 @@
         <input type="number" class="guess-number number-box" placeholder="" min="0" max="9">
         <input type="number" class="guess-number number-box" placeholder="" min="0" max="9">
 
-        <input type="submit" class="guess-button number-box">
+        <input type="submit" class="guess-button number-box" value="check">
         <div id="guess-result">
-          <div class="result" id="strike-result"><p id="strike-count">0</p></div>
-          <div class="result" id="ball-result"><p id="ball-count">0</p></div>
-          <div class="result" id="out-result"><p id="out-count">0</p></div>
+          <div class="result green-circle"><p id="strike-count">0</p></div>
+          <div class="result orange-circle"><p id="ball-count">0</p></div>
+          <div class="result red-circle"><p id="out-count">0</p></div>
         </div>
       </div>
     </div> 
+  </div>  
+  <footer>
     <div id="game-over" >
       <div id="win-game" class="dissapear">
         <p>HOME RUN!! YOU'RE CORRECT</p>
-        <input type="submit" class="start-again-button" value="START AGAIN">
+        <div class="button-container">
+          <input type="submit" class="start-again-button" value="START AGAIN">
+        </div>
       </div>
       <div id="lose-game" class="dissapear">
-        <p>GAME OVER!! YOU LOST</p>
-        <input type="submit" class="start-again-button" value="START AGAIN">
+        <p id="lostMessage"></p>
+        <div class="button-container">
+          <input type="submit" class="start-again-button" value="START AGAIN">
+        </div>
+        
       </div>            
     </div>
     
-  </div>
+  </footer>
+    
+  
   <script src="main.js"></script>
 </body>
 </html>
