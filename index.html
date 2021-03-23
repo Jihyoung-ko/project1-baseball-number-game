@@ -11,7 +11,20 @@
   <h1>Baseball Number Game</h1>
   <div id="container">
     <div id="introduction-container">
-      <!-- game explanation -->
+      <button id="howToBtn">How To Play<br><br>Click</button>      
+      <div id="howTo-container">
+        <div class="howTo-content">
+          <span class="close">&times;</span>
+          <p>It's not a real baseball game, it's a three digit number guessing game. You have 10 attempts and every attempt you'll have a hint. If the number and the position is correct, you get Strike. If the answer has that number but the position is not correct, you get Ball. If there is no number you guessed in the answer, you get Out.</p>
+          <p>Example.</p>
+          <p>The answer number: 178</p>
+          <p>1st attempt: 825 -> 1 Ball 2 Out(you got one ball for 8)<br>
+            2nd attempt: 784 -> 2Ball 1 Out(you got two balls for 7 and 8)<br>
+            3rd attempt: 148 -> 2 Strike 1 Out (you got two strikes for 1 and 8)</p>
+
+        </div>  
+      </div>
+      
       <p><span class="green-circle">Strike</span> : The number and the position is correct</p>
       <p><span class="orange-circle">Ball</span> : The number is correct but the position is wrong</p>
       <p><span class="red-circle">Out</span> : The number is not correct</p>
@@ -19,7 +32,7 @@
     </div>
 
     <div id="game-container">
-      <p>Guess three numbers</p>
+      <p>Guess three number</p>
       
       <div id="answer-number">
         <input type="number" class="number-box" placeholder="?" disabled>
@@ -52,15 +65,17 @@
   <footer>
     <div id="game-over" >
       <div id="win-game" class="dissapear">
-        <p>HOME RUN!! YOU'RE CORRECT</p>
+        <iframe src="https://giphy.com/embed/xUA7b2hY9CTq9jlr4Q" width="400" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <p>HOME RUN!! YOU WIN</p>
         <div class="button-container">
-          <input type="submit" class="start-again-button" value="START AGAIN">
+          <input type="submit" class="start-again-button" value="PLAY AGAIN">
         </div>
       </div>
       <div id="lose-game" class="dissapear">
+        <iframe src="https://giphy.com/embed/1iv8Ucb2bRjqi8G9Ry" width="400" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <p id="lostMessage"></p>
         <div class="button-container">
-          <input type="submit" class="start-again-button" value="START AGAIN">
+          <input type="submit" class="start-again-button" value="PLAY AGAIN">
         </div>
         
       </div>            

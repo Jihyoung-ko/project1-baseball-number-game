@@ -32,7 +32,7 @@ const actionFunc = function(){
   if(attempts < 1){
     document.getElementById('container').classList.add('dissapear');
     document.getElementById('lose-game').classList.remove('dissapear');
-    document.getElementById('lostMessage').innerHTML = `GAME OVER!! YOU LOST, THE ANSWER WAS ${answer.join('')}`;
+    document.getElementById('lostMessage').innerHTML = `GAME OVER!! THE ANSWER WAS ${answer.join('')}`;
 
   }
   
@@ -53,14 +53,14 @@ const actionFunc = function(){
   }else {
 
     for(let playerNumber of playerNumbers) {
-    playerNumber.classList.add("disable");
-    playerNumber.classList.remove("guess-number");
+    playerNumber.classList.add('disable');
+    playerNumber.classList.remove('guess-number');
     }
     document.querySelector('.guess-button').disabled = true;
-    document.querySelector('.guess-button').classList.remove("guess-button");
+    document.querySelector('.guess-button').classList.remove('guess-button');
     document.getElementById('strike-count').removeAttribute('id');
-    document.getElementById("ball-count").removeAttribute('id');
-    document.getElementById("out-count").removeAttribute('id');
+    document.getElementById('ball-count').removeAttribute('id');
+    document.getElementById('out-count').removeAttribute('id');
 
     const newTry = document.createElement('div');
 
@@ -112,8 +112,8 @@ const countHint = () => {
   out = out - strike - ball;
 
   document.getElementById('strike-count').innerHTML = strike;
-  document.getElementById("ball-count").innerHTML = ball;
-  document.getElementById("out-count").innerHTML = out;
+  document.getElementById('ball-count').innerHTML = ball;
+  document.getElementById('out-count').innerHTML = out;
 }
 
 
@@ -125,3 +125,20 @@ for(let startButton of startButtons){
   });
 }
 
+const howToBox = document.getElementById("howTo-container");
+const howTobtn = document.getElementById("howToBtn");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+howTobtn.onclick = function() {
+  howToBox.style.display = "block";
+}
+
+closeBtn.onclick = function() {
+  howToBox.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == howToBox) {
+    howToBox.style.display = "none";
+  }
+}
