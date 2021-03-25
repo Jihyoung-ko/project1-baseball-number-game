@@ -9,10 +9,10 @@
 html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
   background-image: url(img/baseball_field.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
 }
 
 h1 {
@@ -62,7 +62,8 @@ input::-webkit-inner-spin-button {
 }
 
 .number-box {
-  width: 12%;
+  width: 15%;
+  font-weight: bold;
 }
 
 #attempts {
@@ -141,6 +142,7 @@ span {
 #introduction-container span {
   border-radius: 5px;
   padding: 2px 5px;
+  color: black;
 }
 
 #howToBtn {
@@ -172,6 +174,7 @@ span {
 
 .howTo-content {
   background-color: #fefefe;
+  color: black;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -199,10 +202,11 @@ input[type="number"] {
   border-right: none;
   background: transparent;
   border-color: #6225e6;
+  font-size: 1.1em;
 }
 
 input[type="number"]:focus {
-  color: #6225e6;
+  color: white;
 }
 
 input[type="submit"] {
